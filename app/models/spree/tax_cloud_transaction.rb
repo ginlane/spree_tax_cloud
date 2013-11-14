@@ -37,8 +37,6 @@ module Spree
             cart_item = cart_items.find_by_index(response_cart_item[:cart_item_index].to_i)
             cart_item.amount = response_cart_item[:tax_amount].to_f
             cart_item.save
-            # set cart item
-            # cart_items[idx] = cart_item
           end
           cart_items.reload
         end
