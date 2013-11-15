@@ -15,6 +15,6 @@ class CreateSpreeTaxCloudCartItems < ActiveRecord::Migration
       t.timestamps
     end
     add_index :spree_tax_cloud_cart_items, :line_item_id
-    add_index :spree_tax_cloud_cart_items, :tax_cloud_transaction_id
+    add_index :spree_tax_cloud_cart_items, :tax_cloud_transaction_id, :name => 'tax_cloud_cart_trans_id'
   end
 end
